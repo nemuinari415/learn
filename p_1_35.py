@@ -8,12 +8,16 @@ class ContactManager:
         self.filename = "contacts.csv"
     
     def add_contact(self):
+        is_new = not os.path.exists(self.filename)
         with open(self.filename, "a", encoding="utf-8") as f:
-            for key, value in self.contact_list.items():
-                  f.write(f"{key} : {value}" + "\n")
-            print(f"{self.filename} に保存しました")
+            writer = csv.writer(f)
+            if is_new:
+                writer.writerow(self.contact_list.keys()) # ヘッダー
+            writer.writerow(self.contact_list.values())
+        print(f"{self.filename} に保存しました")
     
     def read_contacts(self):
-        with open("contacts.csv", "r", encoding="utf-8") as f:
-            content = f.read()
-        print(content)
+        with open(self.filename, "r", encoding="utf-8") as f:
+            reader = csv.reader(f)
+            for row in reader:
+                print(" | ".join(row))
