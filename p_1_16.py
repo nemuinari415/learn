@@ -1,7 +1,14 @@
-# #p_1_15.py ファイルを読み込む
-from p_1_15 import Palindrome
+# ログ保存アプリ（ミニ日誌）
+from datetime import date
 
-palindrome = Palindrome()
-palindrome.input_word()
-palindrome.is_palindrome()
-palindrome.print_p()
+class DiaryLogger:
+    def __init__(self, diary):
+        self.diary = diary
+        self.todays = date.today().isoformat()
+    
+    def write_diary(self):
+        with open("diary.txt", "a", encoding="utf-8", newline="") as f:
+            f.write(f"{self.todays} : {self.diary}" + "\n" )
+    
+    def print_diary(self):
+        print(f"{self.todays} : {self.diary}")

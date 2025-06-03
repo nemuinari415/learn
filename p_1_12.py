@@ -1,8 +1,9 @@
-# #p_1_11.py ファイルを読み込む
-from p_1_11 import Even_Number
+# ユーザーが入力した整数を逆順のリストにして表示
+class Revers_Num_List:
+    def __init__(self, num_list):
+        self.num_list = num_list
 
-numbers = [11, 22, 33, 44, 55, 66]
-
-even_number = Even_Number(numbers)
-even_number.calc_num()
-even_number.print_even()
+    def revers_num(self):
+        r = list(reversed(self.num_list))
+        print(f"入力 : {self.num_list}")
+        print(f"出力 : {r}")

@@ -1,22 +1,24 @@
-# p_1_21.py ファイルを読み込む
-from p_1_21 import Phone_Books
+# 売上ログファイルを読み込み、商品別売上合計を出力する
+import csv
 
-phone_book = {
-            "田中": "090-1234-5678",
-            "佐藤": "080-2345-6789",
-            "鈴木": "070-3456-7890"
-            }
+class SalesAggregator:
+    def __init__(self, filenames):
+        self.filenames = filenames
+        self.sales_summary = {}
 
-while True:
-    try:
-        name = input("名前を入力してください >> ")
-    except:
-        print("入力が間違ってます")
-
-    if name in phone_book:
-        phone_books = Phone_Books(phone_book, name)
-        phone_books.print_book()
-        break
+    def read_data(self): # CSVファイルを読み込み、商品ごとの合計を集計
+        with open(self.filenames, "r", encoding="utf-8") as f:
+            reader = csv.reader(f)
+            next(reader) # ヘッダーをスキップ
+            for row in reader:
+                item, amount = row[0], int(row[1]) 
+                # item = "商品名", amount = 値段
+                if item in self.sales_summary:
+                    self.sales_summary[item] += amount
+                else:
+                    self.sales_summary[item] = amount
     
-    else:
-        print("登録されていません")
+    def print_summary(self): # 集計結果を商品ごとに表示
+        print("[売上集計結果]")
+        for item, total in self.sales_summary.items():
+            print(f"{item} : {total} 円")

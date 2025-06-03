@@ -1,15 +1,40 @@
-# p_1_23.py ファイルを読み込む
-from p_1_23 import Revers_Num_List
+# 売上データ分析
+import csv
 
-num_list = []
-n = 1
+class SalesAnalyzer:
+    def __init__(self, filenames):
+        self.filenames = filenames
+        self.sales_dic = {}
+        self.total = 0
+    
+    def read_csv_data(self):
+        with open(self.filenames, "r", encoding="utf-8") as f:
+            reader = csv.reader(f)
+            next(reader)
+            next(reader)
+            for row in reader:                
+                days = row[0]
+                item = row[1]
+                price = int(row[2])
+                quantity = int(row[3])            
+                if item in self.sales_dic:
+                    old_days, old_price, old_quantity = self.sales_dic[item]
+                    self.sales_dic[item] = (days, price, old_quantity + quantity)   
+                else:
+                    self.sales_dic[item] = ( days, price, quantity )
+    
+    def calculate_total_sales(self):
+        self.total = 0
+        for item, (days, price, quantity) in self.sales_dic.items():
+            self.total += price * quantity
 
-while len(num_list) < 5:
-    try:
-         num_list.append(int(input(f"{n}つ目の数値を入力してください >>")))
-         n += 1
-    except ValueError:
-         print("入力が間違ってます")
+        self.sales_dic = dict(sorted(
+            self.sales_dic.items(),
+            key=lambda x: x[1][1] * x[1][2], # price * quantity
+            reverse=True
+        ))
 
-revers_num_list = Revers_Num_List(num_list)
-revers_num_list.revers_num()
+    def print_csv_data(self):
+        for items, (days, price, quantity) in self.sales_dic.items():
+            print(f"日付 : {days} | 商品名 : {items} | 値段 : {price} | 数量 {quantity}")
+        print(f"合計金額 : {self.total}")

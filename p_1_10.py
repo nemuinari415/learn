@@ -1,19 +1,17 @@
-# #p_1_09.py ファイルを読み込む
-from p_1_09 import JankenGame
-
-# 実行
-game = JankenGame()
-game.input_player()
-
-while True:
-    game.start_game()
-    game.judge()
+# 名前と年齢を引数で受け取り、「〇〇さんは〇歳です」と出力する
+class Info_Profile:
+    def __init__(self):
+        self.name = None
+        self.age = None
     
-    if game.p1_c == game.p2_c:
-        pass
-    elif (game.p1_c == 1 and game.p2_c == 2) or \
-         (game.p1_c == 2 and game.p2_c == 3) or \
-         (game.p1_c == 3 and game.p2_c == 1):
-        break
-    else:
-        break
+    def input_profile(self):
+        while True:
+            try:
+                self.name = str(input("名前を入力してください >>"))
+                self.age = int(input("年齢を入力してください >>"))
+                break
+            except ValueError:
+                print("入力ミスです")
+    
+    def print_profile(self):
+        print(f"{self.name}さんは、{self.age}歳です")

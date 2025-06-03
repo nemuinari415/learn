@@ -1,6 +1,5 @@
 #ユーザーから数値を入力し、偶数なら "偶数です"
 # 奇数なら "奇数です" と表示する関数 
-# check_even_odd() を書いてください。
 class Even_odd_num:
     def __init__(self):
         self.number = None

@@ -1,9 +1,17 @@
-# #p_1_13.py ファイルを読み込む
-from p_1_13 import Dict_Marge
+# クラス Circle を作って半径を渡すと面積と円周を返す
+import math
 
-dict_a = {"apple": 100, "banana": 150}
-dict_b = {"orange": 120, "grape": 200}
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius # 半径
+    
+    def area_calc(self):
+        self.area = math.pi * self.radius ** 2
+    
+    def circum_calc(self):
+        self.circum = math.pi * 2 * self.radius
 
-dict_marge = Dict_Marge(dict_a, dict_b)
-dict_marge.marges()
-dict_marge.print_marges()
+    def print_circle(self):
+        print(f"半径 : {self.radius}㎝")
+        print(f"面積 : {self.area:.1f}㎠")
+        print(f"円周 : {self.circum:.1f}㎝")

@@ -1,17 +1,36 @@
-# クラス Circle を作って半径を渡すと面積と円周を返す
-import math
+# ファイル拡張子ごとの件数を集計するアプリ
+import csv
+import os
+from collections import defaultdict
 
-class Circle:
-    def __init__(self, radius):
-        self.radius = radius # 半径
-    
-    def area_calc(self):
-        self.area = math.pi * self.radius ** 2
-    
-    def circum_calc(self):
-        self.circum = math.pi * 2 * self.radius
+class ExtensionCounter:
+    def __init__(self, folder_path):
+        self.folder_path = folder_path
 
-    def print_circle(self):
-        print(f"半径 : {self.radius}㎝")
-        print(f"面積 : {self.area:.1f}㎠")
-        print(f"円周 : {self.circum:.1f}㎝")
+    def scan_folder(self): # フォルダ内のファイルを取得し、拡張子ごとにカウント
+        all_items = os.listdir(self.folder_path)
+        self.files = [
+            f for f in all_items if os.path.isfile(
+                os.path.join(self.folder_path, f)
+                )
+            ]
+
+    def print_summary(self): # 拡張子ごとの件数を表示
+        self.counts = defaultdict(int)
+
+        for f in self.files:
+            _, ext = os.path.splitext(f)
+            self.counts[ext] += 1
+        
+        print("拡張子 : 件数")
+        for ext, count in self.counts.items():
+            print(f"{ext} : {count}")
+
+
+    def write_summary(self, filename): # 結果を CSV に保存（例：ext_summary.csv）
+        with open(filename, "w", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["拡張子", "件数"])
+            for ext, count in self.counts.items():
+                writer.writerow([ext, count])
+        print("ファイルに保存しました")

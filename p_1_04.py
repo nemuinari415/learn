@@ -1,7 +1,16 @@
-#p_1_03.py ファイルを読み込む
-from p_1_03 import Words_list
+# リストの中から最大値と最小値を表示する関数
+# min_max() を書いてください。
+class Min_Max:
+    def __init__(self, numbers):
+        self.min_n = None
+        self.max_n = None
+        self.numbers = numbers
 
-words = ["Python", "Programming", "Practice", "File", "Write"]
-
-words_list = Words_list(words)
-words_list.print_words()
+    def min_max_calc(self):
+        self.min_n = min(self.numbers)
+        self.max_n = max(self.numbers)
+        return self.min_n, self.max_n
+    
+    def print_num(self):
+        print(f"最小値 : {self.min_n}")
+        print(f"最大値 : {self.max_n}")

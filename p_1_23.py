@@ -1,9 +1,26 @@
-# ユーザーが入力した整数を逆順のリストにして表示
-class Revers_Num_List:
-    def __init__(self, num_list):
-        self.num_list = num_list
+# 連絡帳アプリ（名前で検索)
+import csv
+class ContactSearcher:
+    def __init__(self, filenames, input_names):
+        self.filenames = filenames
+        self.input_names = input_names
+        self.contact_dict = {}
 
-    def revers_num(self):
-        r = list(reversed(self.num_list))
-        print(f"入力 : {self.num_list}")
-        print(f"出力 : {r}")
+    def read_contacts(self):
+        with open(self.filenames, "r", encoding="utf-8") as f:
+            reader = csv.reader(f)
+            next(reader)
+            for row in reader:
+                name, tel, mail = row[0], row[1], row[2]
+                self.contact_dict[name] = tel, mail
+
+    def search_contact(self):
+        self.input_names = self.input_names.strip()
+        # 名前の前後に空白が入ってると一致しない対策
+        if self.input_names in self.contact_dict:
+            tel, mail = self.contact_dict[self.input_names]
+            print(f"名前 : {self.input_names}")
+            print(f"電話番号 : {tel}")
+            print(f"メール : {mail}")
+        else:
+            print("該当する連絡先は見つかりませんでした。")
