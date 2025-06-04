@@ -345,6 +345,39 @@ class Main:
         extension_counter.print_summary()
         extension_counter.write_summary(filename)
 
+    def p_1_28(self):
+        # p_1_28.py ファイルを読み込む
+        from p_1_28 import SalesManagement
+
+        price_dic = {}
+        filename = "sales.csv"
+
+        while True:
+            price = input("商品名を入力 >>")
+            try:
+                price_dic[price] = int(input(f"{price}の価格を入力 >>"))
+            except ValueError:
+                print("入力ミスです")
+                
+            cont = input("入力を続けますか？[y | n] >> ")
+            if cont.lower() != "y":
+                break
+        
+        sales_management = SalesManagement(price_dic)
+        sales_management.add_data()
+        sales_management.write_csv(filename)
+        sales_management.read_csv(filename)
+    
+    def p_1_29(self):
+        from p_1_29 import SalesManagement
+
+        filename = "p_1_29.csv"
+        sales_dic = {}
+
+        sales_management = SalesManagement(sales_dic)
+        sales_management.read_add_sales(filename)
+        sales_management.print_sales()
+                
 # 出力するクラス
 main = Main()
-main.p_1_27()
+main.p_1_29()
