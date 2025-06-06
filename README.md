@@ -1,1 +1,1 @@
-# Practice_Py
+# python_basic/ ... 基本文法の練習問題
