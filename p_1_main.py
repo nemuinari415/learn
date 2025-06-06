@@ -1,6 +1,6 @@
 class Main:
     def __init__(self):
-        print("実行します")
+        print("実行します" + "\n")
 
     def p_1_01(self):
         # p_1_01.py ファイルを読み込む
@@ -377,7 +377,55 @@ class Main:
         sales_management = SalesManagement(sales_dic)
         sales_management.read_add_sales(filename)
         sales_management.print_sales()
+
+    def p_1_30(self):
+        from p_1_30 import InquiriesReception
+        
+        inquiries = [
+            {"name": "田中",
+             "email": "tanaka@example.com",
+             "message": "資料を送ってください"},
+            {"name": "山田",
+             "email": "yamada@example.com",
+             "message": "セミナーの開催日は？"},
+            {"name": "佐藤",
+             "email": "sato@example.com",
+             "message": "問い合わせテストです"}
+        ]
+
+        inquiries_reception = InquiriesReception(inquiries)
+        inquiries_reception.add_inquiries()
                 
+    def p_1_31(self):
+        from p_1_31 import ProductsPrice
+
+        products = [
+            {"name": "りんご", "category": "果物", "price": 120},
+            {"name": "バナナ", "category": "果物", "price": 80},
+            {"name": "にんじん", "category": "野菜", "price": 100},
+            {"name": "ピーマン", "category": "野菜", "price": 90},
+            {"name": "牛乳", "category": "飲料", "price": 150}
+        ]
+
+        products_price = ProductsPrice(products)
+        products_price.group_by_category()
+        products_price.output()
+    
+    def p_1_32(self):
+        from p_1_32 import Inquiries
+
+        inquiries = [
+        {"name": "田中", "category": "製品", "message": "新しいモデルについて教えて"},
+        {"name": "山田", "category": "サポート", "message": "動作がおかしい"},
+        {"name": "佐藤", "category": "製品", "message": "価格が知りたい"},
+        {"name": "鈴木", "category": "その他", "message": "営業電話を止めてほしい"},
+        {"name": "中村", "category": "サポート", "message": "Wi-Fiの接続が不安定"}
+    ]
+        
+        inquiries_obj = Inquiries(inquiries)
+        inquiries_obj.group_by_category()
+        inquiries_obj.print_category()
+
 # 出力するクラス
 main = Main()
-main.p_1_29()
+main.p_1_32()
