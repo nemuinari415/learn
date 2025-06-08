@@ -426,6 +426,51 @@ class Main:
         inquiries_obj.group_by_category()
         inquiries_obj.print_category()
 
+    def p_1_33(self):
+        from p_1_33 import ProductFilter
+
+        products = [
+            {"name": "りんご", "category": "果物", "price": 120},
+            {"name": "バナナ", "category": "果物", "price": 80},
+            {"name": "にんじん", "category": "野菜", "price": 100},
+            {"name": "ピーマン", "category": "野菜", "price": 90},
+            {"name": "牛乳", "category": "飲料", "price": 150}
+        ]
+
+        category = input("カテゴリーを入力 >>")
+
+        products = ProductFilter(products)
+        products.filter_by_category(category)
+    
+    def p_1_34(self):
+        from p_1_34 import ProductStats
+
+        products = [
+            {"name": "りんご", "category": "果物", "price": 120},
+            {"name": "バナナ", "category": "果物", "price": 80},
+            {"name": "にんじん", "category": "野菜", "price": 100},
+            {"name": "ピーマン", "category": "野菜", "price": 90},
+            {"name": "牛乳", "category": "飲料", "price": 150},
+            {"name": "コーヒー", "category": "飲料", "price": 200}
+        ]
+
+        products_stats = ProductStats(products)
+        products_stats.group_by_category()
+        products_stats.print_average_price()
+    
+    def p_1_35(self):
+        from p_1_35 import ProductFilter
+
+        products = [
+            {"name": "りんご", "price": 120},
+            {"name": "バナナ", "price": 80},
+            {"name": "牛乳", "price": 150},
+            {"name": "コーヒー", "price": 200}
+        ]
+
+        filter_obj = ProductFilter(products)
+        filter_obj.filter_by_min_price(150)
+
 # 出力するクラス
 main = Main()
-main.p_1_32()
+main.p_1_35()
