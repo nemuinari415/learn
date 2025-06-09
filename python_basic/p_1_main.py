@@ -470,7 +470,57 @@ class Main:
 
         filter_obj = ProductFilter(products)
         filter_obj.filter_by_min_price(150)
+    
+    def p_1_36(self):
+        from p_1_36 import PriceBandClassifier
+
+        products = [
+            {"name": "りんご", "price": 120},
+            {"name": "バナナ", "price": 80},
+            {"name": "牛乳", "price": 150},
+            {"name": "コーヒー", "price": 200},
+            {"name": "お菓子", "price": 90}
+        ]
+
+        price_Band_classifier = PriceBandClassifier(products)
+        price_Band_classifier.classify_by_price_band()
+        price_Band_classifier.print_cbpb_data()
+
+    def p_1_37(self):
+        from p_1_37 import UserManager
+
+        users = []
+
+        manager = UserManager(users)
+        manager.add_user("田中", 28, "エンジニア")
+        manager.add_user("山田", 35, "デザイナー")
+        manager.add_user("佐藤", 22, "エンジニア")
+
+        manager.search_by_job("エンジニア")
+        # 出力例:
+        # 名前: 田中, 年齢: 28, 職業: エンジニア
+        # 名前: 佐藤, 年齢: 22, 職業: エンジニア
+
+        manager.search_by_job("マーケター")
+        # 出力例:
+        # 該当するユーザーはいません
+
+    def p_1_38(self):
+        from p_1_38 import SalesManager
+
+        sales_data = [
+            {"name": "りんご", "quantity": 3},
+            {"name": "バナナ", "quantity": 2},
+            {"name": "りんご", "quantity": 1},
+            {"name": "みかん", "quantity": 5},
+            {"name": "バナナ", "quantity": 4}
+        ]
+        
+        sales_manager = SalesManager(sales_data)
+        sales_manager.add_sales()
+        sales_manager.print_sales_summary()
+
 
 # 出力するクラス
 main = Main()
-main.p_1_35()
+main.p_1_38()
