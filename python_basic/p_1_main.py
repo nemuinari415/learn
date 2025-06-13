@@ -519,8 +519,50 @@ class Main:
         sales_manager = SalesManager(sales_data)
         sales_manager.add_sales()
         sales_manager.print_sales_summary()
+    
+    def p_1_39(self):
+        from p_1_39 import InquiryManager
 
+        inquiries = [
+            {"name": "田中", "category": "製品", "message": "新モデルについて教えて"},
+            {"name": "山田", "category": "サポート", "message": "使い方が分かりません"},
+            {"name": "佐藤", "category": "製品", "message": "価格を教えて"},
+            {"name": "鈴木", "category": "その他", "message": "営業電話は不要です"}
+        ]
+        
+        inquiry_obj = InquiryManager(inquiries)
+        inquiry_obj.count_by_category()
+        inquiry_obj.print_summary()
+
+    def p_1_40(self):
+        from p_1_40 import UserAgeClassifier
+        
+        users = [
+            {"name": "田中", "age": 18},
+            {"name": "佐藤", "age": 25},
+            {"name": "中村", "age": 34},
+            {"name": "鈴木", "age": 45}
+        ]
+
+        u = UserAgeClassifier(users)
+        u.classify_by_age()
+        u.print_summary()
+    
+    def p_1_41(self):
+        from p_1_41 import MaxPriceFinder
+
+        products = [
+            {"name": "りんご", "category": "果物", "price": 120},
+            {"name": "バナナ", "category": "果物", "price": 80},
+            {"name": "にんじん", "category": "野菜", "price": 100},
+            {"name": "ピーマン", "category": "野菜", "price": 90},
+            {"name": "牛乳", "category": "飲料", "price": 150}
+        ]
+
+        m = MaxPriceFinder(products)
+        m.max_price_summary()
+        m.print_max_price()        
 
 # 出力するクラス
 main = Main()
-main.p_1_38()
+main.p_1_41()
