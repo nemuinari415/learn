@@ -561,8 +561,53 @@ class Main:
 
         m = MaxPriceFinder(products)
         m.max_price_summary()
-        m.print_max_price()        
+        m.print_max_price() 
+
+    def p_1_42(self):
+        from p_1_42 import StockAnalyzer
+
+        products = [
+            {"name": "りんご", "category": "果物", "price": 120, "stock": 5},
+            {"name": "バナナ", "category": "果物", "price": 80, "stock": 8},
+            {"name": "にんじん", "category": "野菜", "price": 100, "stock": 6},
+            {"name": "ピーマン", "category": "野菜", "price": 90, "stock": 7},
+            {"name": "牛乳", "category": "飲料", "price": 150, "stock": 10}
+        ]
+
+        s = StockAnalyzer(products)
+        s.group_by_category()
+        s.print_summary()
+    
+    def p_1_43(self):
+        from p_1_43 import CategoryTotalCalculator
+
+        products = [
+            {"name": "りんご", "category": "果物", "price": 120},
+            {"name": "みかん", "category": "果物", "price": 80},
+            {"name": "キャベツ", "category": "野菜", "price": 150},
+            {"name": "にんじん", "category": "野菜", "price": 100},
+            {"name": "牛乳", "category": "飲料", "price": 180}
+        ]
+
+        c = CategoryTotalCalculator(products)
+        c.calculate_totals()
+        c.print_totals()
+
+    def p_1_44(self):
+        from p_1_44 import OutStockAnalyzer
+
+        products = [
+            {"category": "食品", "name": "りんご", "stock": 0},
+            {"category": "食品", "name": "バナナ", "stock": 10},
+            {"category": "飲料", "name": "水", "stock": 0},
+            {"category": "飲料", "name": "ジュース", "stock": 5},
+            {"category": "雑貨", "name": "ティッシュ", "stock": 0}
+        ]
+
+        o = OutStockAnalyzer(products)
+        o.out_stock()
+        o.print_stock()
 
 # 出力するクラス
 main = Main()
-main.p_1_41()
+main.p_1_44()
