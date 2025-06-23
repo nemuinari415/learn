@@ -1,10 +1,4 @@
 # logic_023.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_023 import ContactSearcher
 
 filenames = "folder_sample/" + "sample_data" + ".csv"

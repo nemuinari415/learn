@@ -1,10 +1,4 @@
 # logic_034.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_034 import ProductStats
 
 products = [

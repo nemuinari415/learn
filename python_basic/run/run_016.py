@@ -1,10 +1,4 @@
 # logic_016.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_016 import DiaryLogger
 
 diary = input("今日の出来事（１行）を入力 >>")

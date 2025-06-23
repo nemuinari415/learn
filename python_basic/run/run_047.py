@@ -1,10 +1,4 @@
 # logic_047.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_047 import StaffSalesSummary
 
 read_filename = "folder_sample/" + "sample_data" + ".csv"

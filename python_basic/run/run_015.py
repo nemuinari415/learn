@@ -1,10 +1,4 @@
 # logic_015.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_015 import WeekDay
 
 weekday_jp = ["月", "火", "水", "木", "金", "土", "日"]

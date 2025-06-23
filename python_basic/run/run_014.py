@@ -1,10 +1,4 @@
 # logic_014.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_014 import Circle
 
 radius = int(input("半径を入力(cm) >>"))

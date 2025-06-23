@@ -1,10 +1,4 @@
 # logic_025.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_025 import SurveyCounter
 
 filename = "folder_output/" + "logic_025" + ".csv"

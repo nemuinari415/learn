@@ -1,10 +1,4 @@
 # logic_012.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_012 import Revers_Num_List
 
 num_list = []

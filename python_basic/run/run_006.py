@@ -1,10 +1,4 @@
 # logic_006.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_006 import Even_Number
 
 numbers = [11, 22, 33, 44, 55, 66]

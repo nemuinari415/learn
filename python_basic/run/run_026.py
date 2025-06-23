@@ -1,10 +1,4 @@
 # logic_026.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_026 import FolderScanner
 
 folder_path = input("フォルダのパスを入力 >>")

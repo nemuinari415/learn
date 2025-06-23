@@ -1,10 +1,4 @@
 # logic_007.py ファイルを読み込む
-"""
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-"""
-
 from logic.logic_007 import Dict_Marge
 
 dict_a = {"apple": 100, "banana": 150}
