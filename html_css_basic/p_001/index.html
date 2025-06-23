@@ -1,0 +1,36 @@
+<!-- 練習問題：プロフィールカードを作ろう
+以下の情報を含むHTMLとCSSを作成してください。
+
+ユーザー名「レオン」
+写真（images/leon.jpg）
+紹介文「こんにちは、Webデザインを勉強中です！」
+背景は淡いグレー、カードは中央配置、角丸と影をつける -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>プロフィールカード - パイモン</title>
+        <meta name="description" content="Webデザインを勉強中！">
+
+        <!-- Google Fonts（おしゃれなフォント） -->
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Philosopher:wght@700&display=swap" rel="stylesheet">
+
+        <!-- オリジナルCSS -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+
+    <div class="card">
+        <h1 class="title">パイモン</h1>
+        <img class="profile-img" src="../images/prof_icon.jpg" alt="パイモンの写真">
+        <p class="intro">こんにちは、Webデザインを勉強中です！</p>
+        <table class="profile-table">
+            <tr><th>年齢</th><td>不明</td></tr>
+            <tr><th>性別</th><td>女性</td></tr>
+            <tr><th>住所</th><td>テイワッド大陸</td></tr>
+        </table>
+    </div>
+
+</body>
+</html>
