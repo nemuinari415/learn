@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+}
+
+.contact {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-table {
+    width: 100%;
+    border-spacing: 0 1.5rem;
+}
+
+.contact-table th {
+    text-align: left;
+    vertical-align: top;
+    width: 25%;
+    padding-right: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.contact-table td {
+    width: 75%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-row {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+button {
+    background-color: #0bd;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0090aa;
+}

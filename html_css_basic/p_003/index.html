@@ -1,0 +1,45 @@
+<!-- お問い合わせフォーム -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>お問い合わせフォーム</title>
+        <meta name="description" content="Webデザインを勉強中！">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        
+        <!-- Google Fonts（おしゃれなフォント） -->
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Philosopher:wght@700&display=swap" rel="stylesheet">
+
+        <!-- オリジナルCSS -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="contact">
+            <h1 class="title">Contact</h1>
+            <form action="example.php" method="post" name="contact-form">
+                <table class="contact-table">
+                    <tr>
+                        <th><label for="name">お名前</label></th>
+                        <td><input type="text" id="name" name="name" placeholder="名字 名前" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">メール</label></th>
+                        <td><input type="email" id="email" name="email" placeholder="メールアドレス" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="message">内容</label></th>
+                        <td><textarea id="message" name="message" placeholder="メッセージを入力" rows="6" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="submit-row">
+                            <button type="submit">送信する</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
