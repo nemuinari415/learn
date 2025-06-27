@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+}
+
+.page-title {
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.prof-card {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.prof-title {
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: .75rem;
+    border-bottom: 1.5px solid #333;
+    padding-bottom: 1rem;
+}
+
+.prof-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.table-name-th,
+.table-hobby-th,
+.table-name-td,
+.table-hobby-td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.table-name-th,
+.table-hobby-th {
+    background-color: #f0f0f0;
+}
+
+.table-name-th,
+.table-name-td {
+    width: 30%;  /* 名前欄は少し狭め */
+    padding-left: 1rem;
+}
+
+.table-hobby-th,
+.table-hobby-td {
+    width: 70%;  /* 趣味欄は広め */
+    padding-left: 1rem;
+    word-break: break-word;
+}
+
+.btn {
+    font-size: 1rem;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+    background-color: rgb(97, 192, 236);
+    color: #474747;
+    border-radius: 8px;
+    padding: .45rem .75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn-container {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.btn:hover {
+    background-color: rgb(188, 225, 243);;
+    color: #e8f0ff;
+}

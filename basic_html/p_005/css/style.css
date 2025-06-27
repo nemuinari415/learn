@@ -14,40 +14,54 @@ body {
     margin-bottom: 2rem;
 }
 
-.post {
-    max-width: 600px;
+.profile-card {
+    max-width: 480px;
     margin: auto;
+    text-align: center;
     background: #fff;
     padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.username,
-.timestamp {
+.profile-name {
     font-family: 'Philosopher', sans-serif;
-    text-align: left;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
 }
 
-.table {
+.profile-icon {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.profile-table {
     width: 100%;
     border-collapse: separate; /* 行間だけあける */
     border-spacing: 0 1.2rem; 
 }
-.table th {
+.profile-table th {
     width: 1em;               /* 固定幅でラベルを揃える */
     padding-right: 1rem;
     text-align: left;
     vertical-align: top;
     white-space: nowrap;     /* ラベルの改行防止 */
 }
-.table td {
+.profile-table td {
     text-align: left;
     vertical-align: top;
 }
-.textbox {
-    border: 1px solid #333;
-    padding: 0.5rem;
+
+@media (min-width: 800px) {
+.container {
+    display: flex;
+    justify-content: center;
+}
 }

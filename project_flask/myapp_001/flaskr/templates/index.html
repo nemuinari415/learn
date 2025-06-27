@@ -1,0 +1,44 @@
+<!-- 簡単な自己紹介フォーム -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>自己紹介一覧</title>
+        <meta name="description" content="Webデザインを勉強中！">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        
+        <!-- Google Fonts（おしゃれなフォント） -->
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Philosopher:wght@700&display=swap" rel="stylesheet">
+
+        <!-- オリジナルCSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1 class="page-title">自己紹介一覧</h1>
+        <div class="prof-card">
+            <h2 class="prof-title">メンバーリスト</h2>
+                {% if profs == [] %}
+                    <p>メンバーはいません</p>
+                {% else %}
+                    <table class="prof-table">
+                        <tr>
+                            <th class="table-name-th">名前 : </th>
+                            <th class="table-hobby-th">趣味 : </th>
+                        </tr>
+                        {% for prof in profs %}
+                            <tr>
+                                <td class="table-name-td">{{ prof.name }}</td>
+                                <td class="table-hobby-td">{{ prof.hobby }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% endif %}
+            <div class="btn-container">
+                <a class="btn" href="{{ url_for('result') }}">参加</a>
+            </div>
+        </div>
+    </body>
+</html>
