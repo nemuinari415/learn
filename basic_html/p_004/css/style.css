@@ -34,10 +34,10 @@ body {
 .table {
     width: 100%;
     border-collapse: separate; /* 行間だけあける */
-    border-spacing: 0 1rem; 
+    border-spacing: 0 1.2rem; 
 }
 .table th {
-    width: 6em;               /* 固定幅でラベルを揃える */
+    width: 1em;               /* 固定幅でラベルを揃える */
     padding-right: 1rem;
     text-align: left;
     vertical-align: top;
