@@ -1,0 +1,52 @@
+<!-- 簡単な自己紹介フォーム -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>自己紹介一覧</title>
+        <meta name="description" content="Webデザインを勉強中！">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        
+        <!-- Google Fonts（おしゃれなフォント） -->
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Philosopher:wght@700&display=swap" rel="stylesheet">
+
+        <!-- オリジナルCSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1 class="page-title">自己紹介一覧</h1>
+        <div class="prof-card">
+            <h2 class="prof-title">メンバーリスト</h2>
+            <div class="btn-container">
+                <a class="btn" href="{{ url_for('result') }}">参加</a>
+            </div>
+            {% if profs == [] %}
+                <p>メンバーはいません</p>
+            {% else %}
+                {% for prof in profs %}
+                    <div class="prof-container">
+                        <div class="icon-name">
+                            <span class="circle-icon"></span>
+                            <span class="name">{{ prof.name }}</span>
+                        </div>
+                        <div class="prof-info">
+                            <p>年齢 : </p>
+                            <span class="age">{{ prof.age }}</span>
+                            <p>性別 : </p>
+                            <span class="gender">{{ prof.gender }}</span>
+                            <p>職業 : </p>
+                            <span class="occupation">{{ prof.occupation }}</span>
+                        </div>
+                        <div>
+                            <p class="message-title">自己紹介文</p>
+                            <span class="message">{{ prof.message }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </body>
+</html>

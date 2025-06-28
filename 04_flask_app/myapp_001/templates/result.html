@@ -16,15 +16,26 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <div class="prof-card">
-            <h1 class="prof-title">自己紹介</h1>
+        <div>
+            <h1>自己紹介</h1>
             <form method="post" action="{{ url_for('register') }}">
-                <table class="result-table">
+                <table>
                     <tr>
                         <th>名前 : </th>
                         <td><input type="text" name="name"></td>
-                        <th>趣味 : </th>
-                        <td><input type="text" name="hobby"></td>
+                        <th>年齢 : </th>
+                        <td><input type="text" name="age"></td>
+                        <th>性別 : </th>
+                        <td><input type="radio" name="gender" value="男性">男性</td>
+                        <td><input type="radio" name="gender" value="女性">女性</td>
+                        <th>職業 : </th>
+                        <td><input type="text" name="occupation"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>自己紹介文 :</th>
+                        <td><input type="textarea" name="message"></td>
                     </tr>
                 </table>
                 <br>

@@ -1,8 +1,8 @@
 from flask import Flask
 
 app = Flask(__name__)
-import flaskr.main
+import myapp_001.main
 
-from flaskr import db
+from myapp_001 import db
 
 db.create_profile_table()

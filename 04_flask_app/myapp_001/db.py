@@ -7,5 +7,5 @@ DATABASE = os.path.join(BASE_DIR, "database.db")
 
 def create_profile_table():
     with sqlite3.connect(DATABASE) as con:
-        con.execute("CREATE TABLE IF NOT EXISTS profile (name TEXT, hobby TEXT)")
+        con.execute("CREATE TABLE IF NOT EXISTS profile (name TEXT, age, gender TEXT, occupation TEXT, message TEXT)")
         con.commit()

@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+}
+
+.page-title {
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.prof-card {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.prof-title {
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: .75rem;
+    border-bottom: 1.5px solid #333;
+    padding-bottom: 1rem;
+}
+
+.prof-container {
+    max-width: 720px;
+    margin: auto;
+    margin-bottom: 1rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.icon-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* アイコンと名前の間隔 */
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.circle-icon {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #c6c6c6;
+    display: inline-block;
+}
+
+.prof-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* ラベルと名前の間隔 */
+    border-bottom: 1.5px solid #333;
+    font-size: 1.2rem;
+}
+
+.occupation,
+.age,
+.gender {
+    font-size: 1.2rem;
+    color: #565656;
+}
+
+.message-title {
+    font-size: .8rem;
+    color: #c6c6c6;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.message {
+    font-size: 1rem;
+    padding-top: 2rem;
+}
+
+.btn {
+    font-size: 1rem;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+    background-color: rgb(97, 192, 236);
+    color: #474747;
+    border-radius: 4px;
+    padding: .45rem 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.btn:hover {
+    background-color: #c6c6c6;
+    color: #c6c6c6;
+}
