@@ -6,3 +6,4 @@ venv/
 .env/
 .vscode/
 sample/
+04_flask_app/sample
