@@ -1,5 +1,5 @@
 from myapp_001 import app
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 import sqlite3
 import os
 
@@ -19,20 +19,32 @@ def index():
     return render_template("index.html", profs=profs)
 
 
-@app.route("/result")
-def result():
-    return render_template("result.html")
+@app.route("/form")
+def form():
+    return render_template("form.html")
 
 
 @app.route("/register", methods=["POST"])
 def register():
-    name = request.form["name"]
-    age = request.form["age", ""]
-    if age and age != "不明":
-        age = str(age) + "歳"
-    gender = request.form["gender"]
-    occupation = request.form["occupation"]
-    message = request.form["message"]
+    name = request.form.get("name", "").strip()
+    age = request.form.get("age", "").strip()
+    gender = request.form.get("gender", "").strip()
+    occupation = request.form.get("occupation", "").strip()
+    message = request.form.get("message", "").strip()
+
+    # 簡易バリデーション
+    if not all([name, age, gender, occupation, message]):
+        flash("全ての項目を入力してください。")
+        return redirect(url_for("form"))
+
+    if not age.isdigit():
+        flash("年齢は数字で入力してください。")
+        return redirect(url_for("form"))
+
+    age = age + "歳"
+
+    # ここでDBに保存...
+    # insert処理
 
     with sqlite3.connect(DATABASE) as con:
         con.execute("INSERT INTO profile VALUES(?, ?, ?, ?, ?)", [name, age, gender, occupation, message])

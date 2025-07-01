@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>自己紹介一覧</title>
+        <meta name="description" content="Webデザインを勉強中！">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+        <!-- オリジナルCSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        
+    </head>
+    <body>
+        <div>
+            <h1 class="page-title">自己紹介</h1>
+            <form method="post" action="{{ url_for('register') }}">
+                <div class="prof-card">
+                    <h2 class="prof-title">プロフィール記入</h2>
+                    <!-- ボーダーライン -->
+                    <label class="label-name">名前 : 
+                    <input type="text" name="name" class="input-box"></label>
+                    <p class="space">
+                    <!-- 改行 -->
+                    <label class="label-age">年齢 : 
+                    <input type="text" name="age" class="input-box"></label>
+                    <p class="space">
+                    <!-- 改行 -->
+                    <div class="form-group">
+                        <label class="label-gender">性別 : </label>
+                        <label class="radio-option">
+                            <input type="radio" name="gender" class="radio-btn" value="男性">男性</label>
+                        <label class="radio-option">    
+                            <input type="radio" name="gender" class="radio-btn" value="女性">女性</label>
+                    </div>
+                    <p class="space">
+                    <!-- 改行 -->
+                    <label class="label-occupation">職業 : 
+                    <input type="text" name="occupation" class="input-box"></label>
+                    <p class="space">
+                    <label class="label-message">自己紹介文 :</label> 
+                    <p class="input-box">
+                        <textarea name="message" class="message-box" placeholder="内容"></textarea>
+                    </p>
+                    <p class="space">
+                    <div class="btn-container">
+                        <input type="submit" class="btn" value="登録">
+                        <a class="btn" href="{{ url_for('index') }}">戻る</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
