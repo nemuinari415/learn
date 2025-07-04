@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* 共通部分 
+================================================= */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* DESKTOP
+================================================= */
+@media(min-width: 800px) {
+    section {
+        display: flex;
+        justify-content: space-between;
+        height: 80vh;
+        margin: 2rem;
+        background-color: aquamarine;
+    }
+
+    .char-main {
+        width: 50%;
+    }
+
+    .char-sub {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    .char-img {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../images/char_tio.png");
+        background-size: contain;         /* フィットさせる */
+        background-position: center bottom;    /* 画像を中央に */
+        background-repeat: no-repeat;   /* 繰り返さない */
+    }
+
+    .char-name h2 {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+
+    .char-name p {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    .char-face {
+        width: 100%;
+        height: 100%;
+        margin-top: 8rem;
+        background-image: url("../../images/tio_face.png");
+        background-size: contain;
+        background-repeat: no-repeat; 
+        background-color: antiquewhite;
+    }
+}
