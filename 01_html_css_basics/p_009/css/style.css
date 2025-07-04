@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* 共通
+=========================================== */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'M+PLUS+Rounded+1c', sans-serif;
+}
+
+/* DESKTOP
+=========================================== */
+@media (min-width: 800px) {
+    
+/* ナビゲーション */
+    nav {
+        position: sticky;
+        top: 0;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: right;
+        font-size: 1.2rem;
+        margin-top: 0;
+        list-style: none;
+        background-color: antiquewhite;
+    }
+    
+    .main-menu li {
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: .25rem;
+        margin: .75rem;
+    }
+
+    .main-menu a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .main-menu a:hover {
+        color: rgb(165, 222, 232);
+        transition: color .5s;
+    }
+
+    .sns-links {
+        display: flex;
+        justify-content: center;
+        margin: .75rem;
+        gap: .75rem;
+    }
+
+    .fa-brands {
+        color: #0bd;
+        font-size: 1.75rem;
+    }
+
+    .fa-brands:hover {
+        color: rgb(165, 222, 232);
+        transition: color .5s;
+    }
+    
+/* ヘッダー */
+    .top {
+        height: 100vh;
+        background-color: rgb(223, 255, 244);
+    }
+
+    .page-title {
+        font-size: 2rem;
+        padding-top: 1.2rem;
+        text-align: center;
+    }
+
+    .page-movie {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .page-info {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .top p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .box {
+        height: 80%;
+        background-color: rgb(182, 182, 182);
+        margin: 1rem 5rem 1rem 5rem;
+        border-radius: 16px;
+    }
+
+/* フッター */
+
+    footer {
+        height: 25vh;
+        background-color: rgb(182, 182, 182);
+    }
+
+    .sns-links-ft {
+        display: flex;
+        justify-content: center;
+        padding-top: 2.5rem;
+        gap: .75rem;
+    }
+
+    .sns-links-ft i {
+        font-size: 2.5rem;
+    }
+    
+    footer p {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

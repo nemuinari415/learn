@@ -6,4 +6,4 @@ __pycache__/
 .env/
 .vscode/
 sample/
-04_flask_app/sample
+images/
