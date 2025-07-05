@@ -109,6 +109,7 @@ body {
 .btn:hover {
     background-color: #c6c6c6;
     color: #c6c6c6;
+    transition: .5s;
 }
 
 /* form */
@@ -127,7 +128,7 @@ body {
     padding: .25rem;
 }
 
-.message-box {
+#message-box {
     width: 100%;
     height: 150px;
     line-height: 1.5rem;
@@ -156,6 +157,10 @@ body {
 
 .space {
     margin-top: 1.5rem;
+}
+
+.alert {
+    color: #de4949;
 }
 
 /* ------------------------------

@@ -41,6 +41,10 @@ def register():
         flash("年齢は数字で入力してください。")
         return redirect(url_for("form"))
 
+    if len(message) > 100:
+        flash("100文字以内で入力してください。")
+        return redirect(url_for("form"))
+
     age = age + "歳"
 
     # ここでDBに保存...
