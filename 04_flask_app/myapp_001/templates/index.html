@@ -1,50 +1,52 @@
 <!-- 簡単な自己紹介フォーム -->
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>自己紹介一覧</title>
-        <meta name="description" content="Webデザインを勉強中！">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <title>自己紹介一覧</title>
+    <meta name="description" content="Webデザインを勉強中！">
 
-        <!-- リセットCSS -->
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- レスポンシブ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- オリジナルCSS -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 
-    </head>
-    <body>
-        <h1 class="page-title">自己紹介一覧</h1>
-        <div class="prof-card">
-            <h2 class="prof-title">メンバーリスト</h2>
-            <div class="btn-container">
-                <a class="btn" href="{{ url_for('form') }}">参加</a>
-            </div>
-            {% if profs == [] %}
-                <p>メンバーはいません</p>
-            {% else %}
-                {% for prof in profs %}
-                    <div class="prof-container">
-                        <div class="icon-name">
-                            <span class="circle-icon"></span>
-                            <span class="name">{{ prof.name }}</span>
-                        </div>
-                        <div class="prof-info">
-                            <p>年齢 : </p>
-                            <span class="age">{{ prof.age }}</span>
-                            <p>性別 : </p>
-                            <span class="gender">{{ prof.gender }}</span>
-                            <p>職業 : </p>
-                            <span class="occupation">{{ prof.occupation }}</span>
-                        </div>
-                        <div>
-                            <p class="message-title">自己紹介文</p>
-                            <span class="message">{{ prof.message }}</span>
-                        </div>
-                    </div>
-                {% endfor %}
-            {% endif %}
+    <!-- オリジナルCSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h1 class="page-title">自己紹介一覧</h1>
+    <section class="prof-card">
+        <h2 class="prof-title">メンバーリスト</h2>
+        <div class="btn-container">
+            <a class="btn" href="{{ url_for('form') }}">参加</a>
         </div>
-    </body>
+        {% if profs == [] %}
+            <p>メンバーはいません</p>
+        {% else %}
+            {% for prof in profs %}
+            <div class="prof-container">
+                <div class="icon-name">
+                    <a class="circle-icon"></a>
+                    <a class="name">{{ prof.name }}</a>
+                </div>
+                <div class="prof-info">
+                    <p>年齢 : </p>
+                    <a class="age">{{ prof.age }}</a>
+                    <p>性別 : </p>
+                    <a class="gender">{{ prof.gender }}</a>
+                    <p>職業 : </p>
+                    <a class="occupation">{{ prof.occupation }}</a>
+                </div>
+                <div>
+                    <p class="message-title">自己紹介文</p>
+                    <a class="message">{{ prof.message }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </section>
+</body>
 </html>
