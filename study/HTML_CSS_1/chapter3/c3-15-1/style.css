@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+ul {
+    list-style-position: outside;
+    list-style-image: url(../images/star.png)
+}
+
+ol {
+    list-style-position: inside;
+    list-style-image: url(../images/star.png)
+}
+
+p {
+    color: #999;
+}
+
+.blue {
+    color: #0bd;
+}
+
+#orange {
+    color: #fa2;
+}

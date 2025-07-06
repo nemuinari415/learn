@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/*
+ul {
+    list-style-position: outside;
+    list-style-image: url(../images/star.png)
+}
+
+ol {
+    list-style-position: inside;
+    list-style-image: url(../images/star.png)
+}
+
+p {
+    color: #999;
+}
+
+p.blue {
+    color: #0bd;
+}
+
+#orange {
+    color: #fa2;
+}
+*/
+/* FlexBox */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center; /* 複数行向け */
+    /* align-items: center; */ /* １行向け */
+    height: 100vh;
+}
+.item {
+    background: #0bd;
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* CSSグリッド */
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 10px;
+}
+.item2 {
+    background: #0bd;
+    color: #fff;
+    padding: 10px;
+}

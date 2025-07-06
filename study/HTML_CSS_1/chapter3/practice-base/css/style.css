@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    background-color: #aef;
+    width: 400px;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+/* answer 
+.container {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    background-color: #aef;
+    width: 400px;
+    padding: 2rem;
+    margin: 1rem
+} */

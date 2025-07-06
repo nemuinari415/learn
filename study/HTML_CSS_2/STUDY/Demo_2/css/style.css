@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+body {
+	color: #555;
+    font-family: serif;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 6px double #0bd;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* メインコンテンツ */
+main {
+    margin-bottom: 3rem;
+}
+main p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* サイドコンテンツ */
+.side-box {
+    margin-bottom: 2rem;
+    background: #eee;
+    padding: 1.5rem;
+}
+
+li {
+    margin: .5rem 0;
+}
+
+/* リストの装飾 */
+ul li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #0bd;
+    display: inline-block;
+    margin: 0 8px 2px 0;
+}
+ 
+/*
+デスクトップサイズ
+================================================ */
+@media (min-width: 700px){
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main {
+        width: 70%;
+    }
+
+    aside {
+        width: 26%;
+    }
+
+    .sticky {
+        position: sticky;
+        top: 1rem;
+    }
+}

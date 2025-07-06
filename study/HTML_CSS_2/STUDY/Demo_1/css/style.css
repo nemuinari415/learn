@@ -1,0 +1,62 @@
+.container {
+    overflow: auto;
+    scroll-snap-type: y mandatory; /* y 縦方向,
+                                   /* x 横方向(Flexbox), 
+                                   /* both 縦横方向(CSSグリッド) */
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start; /* スクロールスナップの開始位置
+
+    /* 背景画像を画面いっぱいに表示させる設定 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* 表示位置を調整する指定 */
+}
+
+.hero {
+    background-image: url(../images/bread1.jpg);
+    /* 複数の背景画像を指定する
+    background-image: url(../images/bg1.png), url(../images/bg2.png);
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    */
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.title {
+    font-family: "Dancing Script", cursive;
+    font-size: 7rem;
+    margin-bottom: 2rem;
+}
+
+.sns-links {
+    display: flex;
+    justify-content: center;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    gap: .75rem;
+}
+
+.fa-brands {
+    color: #0bd;
+    font-size: 2rem;
+    
+}
+
+.fa-brands:hover {
+    color: rgb(193, 246, 255);
+    transition: color .5s;
+}
+
+/*
+MOBILE SIZE
+============================================== */
+@media (max-width: 700px) {
+    .title {
+        font-size: 4rem;
+    }
+}

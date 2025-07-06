@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+ul {
+    list-style-type: square;
+    list-style-position: outside;
+}
+
+ol {
+    list-style-type: hiragana;
+    list-style-position: inside;
+}
