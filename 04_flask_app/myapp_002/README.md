@@ -1,5 +1,6 @@
 # myapp_002
-1日1語1句を学習する為の英単語帳 WEBアプリ
+英単語帳アプリ
+※1日1語1句を記録して、ランダム表示させる機能
 
 ## DataBase : english.db
 ### Table : words
