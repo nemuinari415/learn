@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/* 共通
+=========================================== */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.home-hero {
+    background: url('../images/bg-hero.jpg') no-repeat right top / 70vw auto;
+    /*
+    background-image: url('../images/bg-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 70vw auto; 
+    */
+    padding: 5.5rem 1rem 3rem;
+}
+
+.home-hero h2 {
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size: 1.5rem;
+    margin: 8vw 0 12vw;
+    background: rgba(255, 255, 255, .8);
+    padding: 1rem;
+    display: inline-block;
+}
+
+.home-hero p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+/* グラフの文字 */
+.ct-label {
+    font-size: 1rem;
+    fill: #fff;
+}
+
+/* 円グラフ */
+.ct-series-a .ct-slice-pie {
+    fill: #2d3374;
+}
+
+.ct-series-b .ct-slice-pie {
+    fill: #3a7edf
+}
+
+.ct-series-c .ct-slice-pie {
+    fill: #9bcbf8;
+}
+
+.ct-series-d .ct-slice-pie {
+    fill: #bbb;
+}
+
+/* 棒グラフ */
+.ct-series-a .ct-bar {
+    stroke: #3a7edf
+}
+
+.ct-bar {
+    stroke-width: 16%;
+}
+
+/* DESK TOP 
+======================================== */
+@media (min-width: 600px) {
+
+    .home-hero {
+        padding: 16vw 1rem;
+    }
+
+    .home-hero h2 {
+        font-size: 2.5rem;
+        margin: 0 0 2rem;
+        background: none;
+        padding: 0;
+    }
+
+    .home-hero p {
+        width: 38vw;
+    }
+}
