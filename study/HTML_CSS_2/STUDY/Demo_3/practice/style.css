@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+body {
+	color: #555;
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0 2rem;
+}
+
+/* 表 */
+table {
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+th,
+td {
+    padding: 1.25rem;
+    display: table-cell;
+}
+th {
+    width: 30%;
+    vertical-align: middle;
+}
+td {
+    width: 70%;
+}
+
+/* 奇数行の背景色を #fee、偶数行の背景色を #ffe */
+tr:nth-child(odd) {
+    background-color: #fee;
+}
+
+tr:nth-child(even) {
+    background-color: #ffe;
+}
+
+/* グラフ */
+.chart {
+    margin: 0 auto;
+}
+.ct-label {
+    font-size: 1rem;
+    fill: #fff;
+}
+.ct-series-a .ct-slice-pie {
+    fill: #FF5D5A;
+}
+.ct-series-b .ct-slice-pie {
+    fill: #540E20;
+}
+.ct-series-c .ct-slice-pie {
+    fill: #FA4B6C;
+}
+.ct-series-d .ct-slice-pie {
+    fill: #bbb;
+}
