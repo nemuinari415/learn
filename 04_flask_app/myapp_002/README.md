@@ -36,3 +36,6 @@
 | email         | TEXT     | メールアドレス（任意）      |
 | password_hash | TEXT     | パスワード（ハッシュ化）    |
 | start_date    | DATE     | 学習開始日（〇日目表示用）  |
+
+
+## Planning Design
