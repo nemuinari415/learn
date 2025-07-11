@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+:root {
+    --heroTop-color: #9e549c;
+    --heroSub-color: #392152;
+    --bg-gradation: linear-gradient(var(--heroTop-color), var(--heroSub-color)) fixed;
+}
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+body {
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 5rem;
+    font-family: 'Texturina', serif;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* ファーストビュー */
+.hero {
+    height: 100vh;
+    text-align: center;
+    padding: 10rem;
+
+    /* 背景色を上部#9e549c、下部 #392152のグラデーションカラーに変更する */
+    background: var(--bg-gradation);
+    
+    /* 右下を20%切り抜いた斜めのラインにする */
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+}
+
+/* ボタン */
+.btn {
+    font-size: 1.5rem;
+    background: #fc2;
+    padding: 1rem;
+    display: inline-block;
+
+    /* カーソルをあわせると、0.5秒かけて変化させる */
+    transition: .5s;
+}
+/* カーソルをあわせると、背景色を #ff0 にする */
+.btn:hover {
+    background: #ff0;
+}
