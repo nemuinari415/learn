@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import pytz
@@ -32,16 +32,29 @@ class Post(db.Model):  # type: ignore
     created_at = db.Column(db.DateTime, nullable=False, default=tokyo_now)
 
 
-@app.route("/<int:number>")
-def hello_world(number):
-    posts = [
-        {"title": "記事のタイトル1", "body": "記事の内容", "created_at": "2024-06-17"},
-        {"title": "記事のタイトル2", "body": "記事の内容", "created_at": "2024-06-17"},
-        {"title": "記事のタイトル3", "body": "記事の内容", "created_at": "2024-06-17"},
-        {"title": "記事のタイトル4", "body": "記事の内容", "created_at": "2024-06-17"},
-    ]
-    post = posts[number]
-    return render_template("admin.html", post=post)
+@app.route("/admin")
+def admin():
+    posts = Post.query.all()
+    return render_template("admin.html", posts=posts)
+
+
+@app.route("/create", methods=["GET", "POST"])
+def create():
+    # リクエストのメソッドの判別
+    if request.method == "POST":
+
+        # リクエストできた情報の判別
+        title = request.form.get("title")
+        body = request.form.get("body")
+
+        # 情報の保存
+        post = Post(title=title, body=body)
+        db.session.add(post)
+        db.session.commit()
+        return redirect("/admin")
+
+    elif request.method == "GET":
+        return render_template("create.html", method="GET")
 
 
 """ pythonコマンド
