@@ -1,0 +1,35 @@
+/* 一番上に置く */
+@use 'base/variables'; 
+@use 'pages/header';
+
+/* style.scss */
+.nav {
+    padding: 10px;
+
+    a {
+        color: variables.$main-color;
+    }
+}
+
+.button {
+    background: variables.$main-color;
+    &.mb {
+        margin-bottom: 20px;
+    }
+    &:hover {
+        background: variables.$sub-color;
+    }
+}
+
+.post {
+    margin-bottom: 20px;
+    &-title {
+        font-size: 2rem;
+        padding-bottom: 10px;
+        color: variables.$main-color;
+    }
+    &-date {
+        color: #ccc;
+    }
+}
+    

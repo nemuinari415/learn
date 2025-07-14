@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>新規登録</h1>
+<form method="POST">
+    <label for="title">タイトル</label>
+    <input type="text" name="title" id="title">
+    <label for="body">内容</label>
+    <input type="text" name="body" id="body">
+    <input type="submit" name="新規登録" value="登録">
+</form>
+{{ method }}
+{% endblock %}

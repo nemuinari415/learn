@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+body {
+	color: #555;
+    font-family: sans-serif;
+    text-align: center;
+}
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0 3rem;
+}
+.gallery-img {
+    max-width: 300px;
+    transition: .3s;
+
+    /* 通常時は画像をセピアに*/
+    filter: sepia(100%);
+    transition: .5s;
+    transform-origin: center;
+}
+
+/* 画像にカーソルをあわせるとカラーで表示させる */
+.gallery-img:hover {
+    filter: sepia(0);
+
+    /* 画像を右に10°傾ける */
+    transform: rotate(10deg);
+}

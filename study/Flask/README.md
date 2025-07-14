@@ -126,3 +126,6 @@ def greet():
 ```text
 request.args.get("name") → GETパラメータ（クエリ文字列）を受け取る
 ```
+```text
+postgreSQL, flask_sqlalchemy, SQLAlchemy
+```

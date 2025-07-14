@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    display: inline-block;
+    background-image: linear-gradient(90deg, #0db, #0db 50%, #fff 50%, #fff);
+    background-size: 200% 100%;
+    padding: .5rem 1rem;
+}
