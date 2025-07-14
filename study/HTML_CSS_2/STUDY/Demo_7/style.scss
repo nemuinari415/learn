@@ -1,0 +1,13 @@
+@mixin gradient-title($color1: #4db1ec, $color2: #b473bf) {
+    background: linear-gradient($color1, $color2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.post-title {
+    @include gradient-title;
+}
+.about-title {
+    @include gradient-title(#ff9f67, #ffd673);
+}

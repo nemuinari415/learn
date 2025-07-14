@@ -26,8 +26,8 @@
 | `01_html_css_basics` | HTML/CSSの基礎学習 | HTML5, CSS3 |
 | `02_python_basics` | Python基礎文法と演習 | Python |
 | `03_sql_basics` | SQL構文とSQLite操作 | SQLite |
-| `04_flask_app` | Flaskで作ったToDoアプリ | Python, Flask, SQLite |
-| `study`        | 学習（書籍など）を記録する為のフォルダ |
+| `04_flask_app` | Flaskで作ったアプリ | Python, Flask, SQLite |
+| `study`        | 学習（書籍など）を記録する為のフォルダ | HTML-CSS, JavaScript, Python, SQLite, PostgreSQL, Flask, etc|
 
 ## プロジェクトの方針
 
