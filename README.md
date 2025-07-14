@@ -8,10 +8,10 @@
  - VScode WSL2
 
 ## 学習課題
- - HTML_CSS
+ - HTML_CSS/SCSS
  - JavaScript
  - Python
- - SQL
+ - SQL(SQLite, PostgreSQL)
  - GitHubFlow
  - Linux
  - Flask
@@ -23,10 +23,11 @@
 
 | フォルダ | 内容 | 使用技術 |
 |----------|------|----------|
-| `01_html_css_basics` | HTML/CSSの基礎学習 | HTML5, CSS3 |
+| `01_html_css_basics` | HTML/CSSの基礎学習 | HTML-CSS/SCSS |
 | `02_python_basics` | Python基礎文法と演習 | Python |
 | `03_sql_basics` | SQL構文とSQLite操作 | SQLite |
-| `04_flask_app` | Flaskで作ったアプリ | Python, Flask, SQLite |
+| `04_flask_app` | Flaskで作ったアプリ | Python3, Flask, SQLite |
+| `05_JavaScript`| JavaScriptの基本演習 |
 | `study`        | 学習（書籍など）を記録する為のフォルダ | HTML-CSS, JavaScript, Python, SQLite, PostgreSQL, Flask, etc|
 
 ## プロジェクトの方針
@@ -53,7 +54,6 @@
 | 2025-06 | イラスト図解式 この一冊で全部わかるWeb技術の基本 |
 | 2025-06 | ほんの一手間で劇的に変わるHTML&CSSとWebデザイン実践講座 |
 | 2025-06 | 1冊ですべて身につくJavaScript入門講座 |
-| 予定:   |  |
 | 2025-07 | 新しいLinuxの教科書 |
 | 2025-07 | いちばんやさしい ITパスポート 絶対合格の教科書 |
 | 2025-07 | 独学コンピューターサイエンティスト Pythonで学ぶアルゴリズムとデータ構造 |
