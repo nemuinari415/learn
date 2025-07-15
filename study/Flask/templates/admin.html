@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+<a href="/create" role="btn">新規登録</a>
 {% for post in posts %}
 <article>
+    <img src="{{ url_for('static', filename='img/' + post.img_name)}}">
+    <a href="/{{ post.id }}/update" role="btn">更新</a>
+    <a href="/{{ post.id }}/delete" role="btn">削除</a>
     <h2>{{ post.title }}</h2>
     <p>{{ post.created_at }}</p>
     <p>{{ post.body }}</p>
