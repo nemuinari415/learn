@@ -1,0 +1,16 @@
+@use '../base/variables';
+
+#profile-card {
+    background: variables.$card-color;
+    border: 1px solid #000;
+    border-radius: 12px;
+    width: 200px;
+    height: 100px;
+}
+
+.name,
+.message {
+    text-align: center;
+    margin: 1rem;
+    color: white;
+}
