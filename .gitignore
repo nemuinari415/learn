@@ -15,3 +15,5 @@ study/HTML_CSS_2/sample
 study/JavaScript_1/sample
 study/Flask/venv
 study/Flask/static/img
+study/SQLAlchemy/venv
+study/SQLAlchemy/.env
