@@ -1,14 +1,4 @@
 @charset "UTF-8";
-@-webkit-keyframes slideFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 @keyframes slideFadeIn {
   0% {
     opacity: 0;
@@ -43,8 +33,7 @@ h2 {
 }
 
 #profile-card.slide-in {
-  -webkit-animation: slideFadeIn 1s ease-out forwards;
-          animation: slideFadeIn 1s ease-out forwards;
+  animation: slideFadeIn 1s ease-out forwards;
 }
 
 .container {
@@ -97,5 +86,4 @@ h2 {
 .text {
   font-size: 1.2rem;
   text-align: left;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

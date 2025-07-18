@@ -1,5 +1,7 @@
 @charset "UTF-8";
-/* _variables.scss */ /* _header.scss */
+/* 一番上に置く */
+/* _variables.scss */
+/* _header.scss */
 header {
   padding: 2rem;
   background: #000;
@@ -8,7 +10,6 @@ header h1 {
   font-size: 3rem;
 }
 
-/* 一番上に置く */
 /* style.scss */
 .nav {
   padding: 10px;
@@ -37,5 +38,4 @@ header h1 {
 }
 .post-date {
   color: #ccc;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
