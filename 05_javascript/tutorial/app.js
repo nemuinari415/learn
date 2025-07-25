@@ -93,6 +93,7 @@ function metalBurst(lastDamage){
 
 console.log(metalBurst(10));
 */
+/*
 function hornDrill(theirHp){
     if (Math.random() <= 0.3){
         return theirHp;
@@ -102,3 +103,76 @@ function hornDrill(theirHp){
 }
 
 console.log(hornDrill(10));
+*/
+//const オブジェクト名 = {
+//    プロパティ名: 値
+//};
+/*
+const susUser = {
+    id: 1,
+    userName: "Taro",
+    gender: "male",
+    like: function() {
+        console.log("like");
+    },
+    post: function() {
+        console.log("post");
+    }
+};
+console.log(susUser.id); // 1
+*/
+/*
+const snsUser = {
+    id: 1,
+    userName: "Taro",
+    like: function () { },
+    post: function () { },
+    followers: ["Yamada", "Suzuki", "Tanaka"],
+    followers: ["Yamada", "Suzuki"],
+    premium: true,
+    darkMode: false,
+    posts: null,
+}
+console.log(snsUser.id); // 1
+*/
+/*
+const pikachu = {
+    name: "ピカチュウ",
+    level: 18,
+    types: ["でんき"],
+    skills: ["10万ボルト", "でんこうせっか", "たいあたり"],
+    levelUp: function() {
+        this.level++;
+        if (this.level >= 20) {
+            this.skills.push("スパーク");
+        }
+    }
+};
+*/
+/*
+console.log(parseInt("2")); // 2 -> 整数に変換
+*/
+/*
+const myPokemons = ["サンダー", "ホウオウ", "スイクン", "ラティアス", "パルキア"];
+myPokemons.push("ミュウツー");
+console.log(myPokemons.length); // 6
+
+const oldVersions = ["赤", "緑", "青"];
+const newVersions = ["ルビー", "サファイア", "エメラルド"];
+
+console.log(oldVersions.concat(newVersions));
+// ["赤", "緑", "青", "ルビー", "サファイア", "エメラルド"]
+*/
+const button = document.getElementById("button");
+const output = document.getElementById("output");
+
+button.addEventListener("click", () => {
+    // ピカチュウの名前を 20%の確率で表示する
+    let num = Math.floor(Math.random() * 5);
+    if (num === 0) {
+        output.textContent = "ピカチュウ";
+    } else {
+        output.textContent = "ざんねん！あと少しで捕まえられたのに！";
+    }
+    console.log(output.textContent);
+});

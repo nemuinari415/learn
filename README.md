@@ -17,6 +17,7 @@
  - Flask
  - Django
  - Docker
+ - TypeScript
  - Web技術、ソフトウェア工学など
  
 ## 内容一覧
