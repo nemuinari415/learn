@@ -31,6 +31,28 @@
 | `05_JavaScript`| JavaScriptの基本演習 |
 | `study`        | 学習（書籍など）を記録する為のフォルダ | HTML-CSS, JavaScript, Python, SQLite, PostgreSQL, Flask, etc|
 
+## Conventional Commits（構造化スタイル）
+```bash
+# 構文:
+$ <type>(<scope>): <message>
+```
+
+| type     | 意味             |
+| -------- | -------------- |
+| feat     | 新機能            |
+| fix      | バグ修正           |
+| docs     | ドキュメントの修正      |
+| style    | コードの整形（機能変更なし） |
+| refactor | 機能は変えずにコード整理   |
+| test     | テスト追加や修正       |
+| chore    | ビルドや設定の変更など    |
+| practice | 練習問題解答 |
+
+```bash
+# 例:
+$ git commit -m "practice(Python): Record learning log"
+```
+
 ## プロジェクトの方針
 
 - 学習内容をジャンルごとに整理
@@ -59,3 +81,6 @@
 | 2025-07 | いちばんやさしい ITパスポート 絶対合格の教科書 |
 | 2025-07 | 独学コンピューターサイエンティスト Pythonで学ぶアルゴリズムとデータ構造 |
 | 2025-07 | VTuberサプーが教える！Python初心者のコード／プロのコード |
+| 2025-07 | 独習 JavaScript |
+| 2025-07 | プロを目指す人ののためのTypeScript |
+| 2025 07 | Docker & 仮想サーバー |
