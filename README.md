@@ -82,5 +82,5 @@ $ git commit -m "practice(Python): Record learning log"
 | 2025-07 | 独学コンピューターサイエンティスト Pythonで学ぶアルゴリズムとデータ構造 |
 | 2025-07 | VTuberサプーが教える！Python初心者のコード／プロのコード |
 | 2025-07 | 独習 JavaScript |
-| 2025-07 | プロを目指す人ののためのTypeScript |
+| 2025-07 | プロを目指す人のためのTypeScript 入門 |
 | 2025 07 | Docker & 仮想サーバー |
