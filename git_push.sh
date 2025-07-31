@@ -10,5 +10,5 @@ git commit -m "$MESSAGE"
 git push origin "$BRANCH"
 
 # bash
-# ./git_push.sh python                  # デフォルトメッセージ
-# ./git_push.sh python "Add decorator"  # 任意メッセージ
+# $ source ./git_push.sh python                  # デフォルトメッセージ
+# $ source ./git_push.sh python "Add decorator"  # 任意メッセージ
