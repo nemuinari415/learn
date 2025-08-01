@@ -1,14 +1,20 @@
 #!/bin/bash
-BRANCH=$(git branch --show-current)
-TOPIC=${1,,} # 引数1を小文字に変換
-DETAIL=${2:-"Record learning log"}  # 引数2があれば使う、なければデフォルト
 
-MESSAGE="practice($TOPIC): $DETAIL"
+TYPE=$1      # 例: "practice"
+SCOPE=$2     # 例: "python"
+MSG=$3       # 任意メッセージ（指定がない場合は空）
+
+if [ "$TYPE" = "practice" ] && [ -z "$MSG" ]; then
+    MSG="Record learning log"
+elif [ "$TYPE" = "docs" ] && [ -z "$MSG" ]; then
+    MSG="edit document"
+else
+    MSG="Update something"
+fi
+
+BRANCH=$(git branch --show-current)
+MESSAGE="${TYPE}(${SCOPE}): ${MSG}"
 
 git add .
 git commit -m "$MESSAGE"
 git push origin "$BRANCH"
-
-# bash
-# $ source ./git_push.sh python                  # デフォルトメッセージ
-# $ source ./git_push.sh python "Add decorator"  # 任意メッセージ
