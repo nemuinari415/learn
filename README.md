@@ -1,86 +1,153 @@
-# learn
+# Programming Learning Portfolio
 
-このリポジトリは、私がプログラミング学習で取り組んだ成果物をまとめたポートフォリオです。
-理解を深める為にChatGPTに実践的な練習問題の出題など、学習のサポートをしてもらっています。
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
-## 作業環境
- - Windows11
- - VScode WSL2
+## 📖 概要
 
-## 学習課題
- - HTML_CSS/SCSS
- - JavaScript
- - Python
- - SQL(SQLite, PostgreSQL)
- - GitHubFlow
- - Linux
- - Flask
- - Django
- - Docker
- - TypeScript
- - Web技術、ソフトウェア工学など
- 
-## 内容一覧
+プログラミング学習で取り組んだ成果物をまとめた学習ポートフォリオです。
+基礎から実践まで体系的に学習し、実際に動作するWebアプリケーションの開発を通じて技術力を向上させています。
 
-| フォルダ | 内容 | 使用技術 |
-|----------|------|----------|
-| `01_html_css_basics` | HTML/CSSの基礎学習 | HTML-CSS/SCSS |
-| `02_python_basics` | Python基礎文法と演習 | Python |
-| `03_sql_basics` | SQL構文とSQLite操作 | SQLite |
-| `04_flask_app` | Flaskで作ったアプリ | Python3, Flask, SQLite |
-| `05_JavaScript`| JavaScriptの基本演習 |
-| `study`        | 学習（書籍など）を記録する為のフォルダ | HTML-CSS, JavaScript, Python, SQLite, PostgreSQL, Flask, etc|
+### 🎯 学習方針
+- **体系的な学習**: 書籍とハンズオン学習の組み合わせ
+- **実践重視**: 学んだ技術を使った実際のアプリケーション開発
+- **品質意識**: シンプルで読みやすいコードの作成
+- **継続的改善**: Git/GitHubを活用したバージョン管理と成長記録
 
-## Conventional Commits（構造化スタイル）
+## 🛠️ 開発環境
+
+- **OS**: Windows 11 + WSL2 (Ubuntu)
+- **エディタ**: Visual Studio Code
+- **バージョン管理**: Git/GitHub
+- **コンテナ**: Docker/Docker Compose
+
+## 🚀 主要プロジェクト
+
+### 🎯 [Todo App - タスク管理システム](../flask_app/)
+**技術スタック**: Flask, PostgreSQL, SQLAlchemy, HTML/CSS, JavaScript, Docker
+
+- ドラッグ&ドロップによる直感的なタスク管理
+- カテゴリー別タスク整理機能
+- レスポンシブデザイン対応
+- リアルタイム更新機能
+
+### 📚 [英単語学習アプリ](04_flask_app/myapp_002/)
+**技術スタック**: Python, Flask, SQLite
+
+- 単語帳機能とランダム出題システム
+- 学習進捗の記録・管理
+- RESTful API設計
+
+## 📁 プロジェクト構成
+
+| プロジェクト | 概要 | 主要技術 | 学習内容 |
+|-------------|------|----------|-----------|
+| **Frontend Basics** | HTML/CSS/JavaScript基礎 | HTML5, CSS3, Sass, JavaScript | レスポンシブデザイン、アニメーション |
+| **Python Programming** | Python基礎〜応用 | Python 3.11 | 基本文法、OOP、ファイル処理 |
+| **Database Management** | データベース操作 | SQLite, PostgreSQL | SQL文法、DB設計、トランザクション |
+| **Web Development** | Webアプリケーション開発 | Flask, SQLAlchemy | MVC架構、ORM、API設計 |
+| **Frontend Advanced** | JavaScript応用 | ES6+, DOM操作, 非同期処理 | モダンJavaScript、SPA概念 |
+
+## 🎓 習得技術・スキル
+
+### フロントエンド
+- **HTML5/CSS3**: セマンティックHTML、Flexbox/Grid、アニメーション
+- **Sass/SCSS**: 効率的なCSS設計・管理
+- **JavaScript**: ES6+、DOM操作、非同期処理、イベントハンドリング
+- **レスポンシブデザイン**: モバイルファースト設計
+
+### バックエンド
+- **Python**: オブジェクト指向プログラミング、例外処理、モジュール設計
+- **Flask**: MVCアーキテクチャ、ルーティング、テンプレート、セッション管理
+- **SQLAlchemy**: ORM、データベース設計、リレーション管理
+
+### データベース
+- **SQL**: CRUD操作、JOIN、集計関数、インデックス設計
+- **SQLite/PostgreSQL**: データベース設計、正規化、トランザクション
+
+### 開発環境・ツール
+- **Git/GitHub**: バージョン管理、ブランチ戦略、プルリクエスト
+- **Docker**: コンテナ化、開発環境統一
+- **Linux/WSL2**: コマンドライン操作、シェルスクリプト
+
+## 📚 学習リソース
+
+### 技術書籍（2025年学習）
+**Web開発**
+- 1冊ですべて身につくHTML&CSSとWebデザイン入門講座
+- ほんの一手間で劇的に変わるHTML&CSSとWebデザイン実践講座
+- 1冊ですべて身につくJavaScript入門講座
+- 独習 JavaScript
+
+**Python・データベース**
+- スッキリわかるPython入門
+- 独学プログラマー Python言語の基本から仕事のやり方まで
+- スッキリわかるSQL入門
+- 独学コンピューターサイエンティスト
+
+**インフラ・その他**
+- 新しいLinuxの教科書
+- Docker & 仮想サーバー
+- いちばんやさしいGit&GitHubの教本
+- プロを目指す人のためのTypeScript入門
+
+## 🌟 開発成果・特徴
+
+### コード品質
+- **可読性重視**: 適切な命名規則、コメント、関数分割
+- **セキュリティ**: 入力値検証、SQLインジェクション対策、XSS対策
+- **エラーハンドリング**: 適切な例外処理とユーザビリティ
+
+### 開発プロセス
+- **バージョン管理**: Conventional Commitsによる構造化されたコミット
+- **継続的改善**: コードレビューとリファクタリング
+- **ドキュメント**: プロジェクトごとの詳細なREADME作成
+
+### 実用性
+- **レスポンシブ対応**: モバイル・デスクトップ両対応
+- **ユーザビリティ**: 直感的なUI/UX設計
+- **パフォーマンス**: 効率的なDB設計、非同期処理
+
+## 🎯 今後の学習予定
+
+### 短期目標（3ヶ月）
+- [ ] **TypeScript**: 型安全なJavaScript開発
+- [ ] **React**: モダンフロントエンド開発
+- [ ] **Django**: Python Webフレームワーク上級
+
+### 中期目標（6ヶ月）
+- [ ] **CI/CD**: GitHub Actions、自動デプロイ
+- [ ] **AWS**: クラウドサービス、サーバーレス
+- [ ] **テスト**: 単体テスト、統合テスト
+
+### 長期目標（1年）
+- [ ] **マイクロサービス**: 分散システム設計
+- [ ] **パフォーマンス最適化**: 高負荷対応
+- [ ] **チーム開発**: アジャイル、スクラム
+
+## 📊 コミット規約
+
 ```bash
-# 構文:
-$ <type>(<scope>): <message>
+# 構文: <type>(<scope>): <description>
+
+feat(frontend): ユーザー認証機能を追加
+fix(api): データベース接続エラーを修正
+docs(readme): プロジェクト概要を更新
+style(css): レスポンシブデザインを改善
+refactor(models): データベースモデルを最適化
+test(unit): ユーザー機能のテストを追加
+practice(javascript): DOM操作の練習問題を実装
 ```
 
-| type     | 意味             |
-| -------- | -------------- |
-| feat     | 新機能            |
-| fix      | バグ修正           |
-| docs     | ドキュメントの修正      |
-| style    | コードの整形（機能変更なし） |
-| refactor | 機能は変えずにコード整理   |
-| test     | テスト追加や修正       |
-| chore    | ビルドや設定の変更など    |
-| practice | 練習問題解答 |
+## 📞 連絡先
 
-```bash
-# 例:
-$ git commit -m "practice(Python): Record learning log"
-```
+このポートフォリオについてご質問やフィードバックがございましたら、お気軽にお声がけください。
 
-## プロジェクトの方針
+---
 
-- 学習内容をジャンルごとに整理
-- シンプルなコードを重視
-- Git/GitHubの運用練習も含む
-- Linux 環境 / WSL2 でソフトスキルを身に付ける
-- 書籍で体系的にイメージを掴む
-- ChatGPTと連携して学習 / 練習問題、エラー解決など 
-- youtube講座を視聴して理解を深める
-
-## 学習書籍
-
-| 日付 | 書籍名 |
-|---------|-------|
-| 2025-05 | スッキリわかるPython入門 |
-| 2025-05 | 独学プログラマー Python言語の基本から仕事のやり方まで |
-| 2025-05 | シゴトがはかどる Python自動処理の教科書 |
-| 2025-05 | Pythonでつくる ゲーム開発 入門講座 |
-| 2025-06 | 1冊ですべて身につくHTML&CSSとWebデザイン入門講座 |
-| 2025-06 | スッキリわかるSQL入門 |
-| 2025-06 | いちばんやさしいGit&GitHubの教本 |
-| 2025-06 | イラスト図解式 この一冊で全部わかるWeb技術の基本 |
-| 2025-06 | ほんの一手間で劇的に変わるHTML&CSSとWebデザイン実践講座 |
-| 2025-06 | 1冊ですべて身につくJavaScript入門講座 |
-| 2025-07 | 新しいLinuxの教科書 |
-| 2025-07 | いちばんやさしい ITパスポート 絶対合格の教科書 |
-| 2025-07 | 独学コンピューターサイエンティスト Pythonで学ぶアルゴリズムとデータ構造 |
-| 2025-07 | VTuberサプーが教える！Python初心者のコード／プロのコード |
-| 2025-07 | 独習 JavaScript |
-| 2025-07 | プロを目指す人のためのTypeScript 入門 |
-| 2025 07 | Docker & 仮想サーバー |
+> **学習継続中** - 新しい技術の習得と既存スキルの向上に日々取り組んでいます
