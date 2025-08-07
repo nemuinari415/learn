@@ -1,0 +1,58 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0 166076 10496 ?        Ss   09:13   0:00 /sbin/init
+root         2  0.0  0.0   3060  1536 ?        Sl   09:13   0:00 /init
+root         6  0.0  0.0   3092  1792 ?        Sl   09:13   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root        61  0.0  0.1  64196 17288 ?        S<s  09:13   0:00 /lib/systemd/systemd-journald
+root        90  0.0  0.0  22888  5888 ?        Ss   09:13   0:00 /lib/systemd/systemd-udevd
+systemd+   130  0.0  0.0  26332 14080 ?        Ss   09:13   0:00 /lib/systemd/systemd-resolved
+systemd+   134  0.0  0.0  89364  6912 ?        Ssl  09:13   0:00 /lib/systemd/systemd-timesyncd
+root       202  0.0  0.0   4308  2560 ?        Ss   09:13   0:00 /usr/sbin/cron -f -P
+message+   204  0.0  0.0   8584  4608 ?        Ss   09:13   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       209  0.0  0.1  30088 18944 ?        Ss   09:13   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+syslog     211  0.0  0.0 222404  5120 ?        Ssl  09:13   0:00 /usr/sbin/rsyslogd -n -iNONE
+root       215  0.0  0.0  15332  7168 ?        Ss   09:13   0:00 /lib/systemd/systemd-logind
+root       237  0.0  0.0   3240  2048 ?        Ss   09:13   0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud console 115200,38400,9600 vt220
+root       239  0.0  0.0   3196  1792 tty1     Ss+  09:13   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root       257  0.0  0.1 107164 21760 ?        Ssl  09:13   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+postgres   273  0.0  0.1 215804 29696 ?        Ss   09:13   0:00 /usr/lib/postgresql/14/bin/postgres -D /var/lib/postgresql/14/main -c config_file=/etc/postgresql/14/main/postgresql.conf
+postgres   305  0.0  0.0 215804  7384 ?        Ss   09:13   0:00 postgres: 14/main: checkpointer 
+postgres   306  0.0  0.0 215804  8408 ?        Ss   09:13   0:00 postgres: 14/main: background writer 
+postgres   307  0.0  0.0 215804 11480 ?        Ss   09:13   0:00 postgres: 14/main: walwriter 
+postgres   308  0.0  0.0 216372  9688 ?        Ss   09:13   0:00 postgres: 14/main: autovacuum launcher 
+postgres   309  0.0  0.0  70396  7128 ?        Ss   09:13   0:00 postgres: 14/main: stats collector 
+postgres   310  0.0  0.0 216232  9176 ?        Ss   09:13   0:00 postgres: 14/main: logical replication launcher 
+root       374  0.0  0.0   7524  4608 pts/1    Ss   09:13   0:00 /bin/login -f
+yuki       437  0.0  0.0  16960  9472 ?        Ss   09:14   0:00 /lib/systemd/systemd --user
+yuki       438  0.0  0.0 169000  5124 ?        S    09:14   0:00 (sd-pam)
+yuki       443  0.0  0.0   6232  5120 pts/1    S+   09:14   0:00 -bash
+root      5574  0.0  0.0   7476  4352 pts/8    Ss   09:28   0:00 /bin/login -f
+root      5635  0.0  0.0  17080  8960 ?        Ss   09:28   0:00 /lib/systemd/systemd --user
+root      5636  0.0  0.0 169000  5132 ?        S    09:28   0:00 (sd-pam)
+root      5643  0.0  0.0   6100  4608 pts/8    S+   09:28   0:00 -bash
+root      7686  0.0  0.1 293024 19712 ?        Ssl  09:32   0:00 /usr/libexec/packagekitd
+root      7690  0.0  0.0 234508  6912 ?        Ssl  09:32   0:00 /usr/libexec/polkitd --no-debug
+root     22746  0.0  0.0   3064   768 ?        Ss   10:39   0:00 /init
+root     22747  0.0  0.0   3080   768 ?        S    10:39   0:00 /init
+yuki     22748  0.0  0.0   2892  1536 pts/0    Ss+  10:39   0:00 sh -c "$VSCODE_WSL_EXT_LOCATION/scripts/wslServer.sh" 488a1f239235055e34e673291fb8d8c810886f81 stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=4259664420-1565870122-3220486353-1664713695 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+yuki     22749  0.0  0.0   2892  1536 pts/0    S+   10:39   0:00 sh /mnt/c/Users/lyuke/.vscode/extensions/ms-vscode-remote.remote-wsl-0.99.0/scripts/wslServer.sh 488a1f239235055e34e673291fb8d8c810886f81 stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=4259664420-1565870122-3220486353-1664713695 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+yuki     22754  0.0  0.0   2892  1536 pts/0    S+   10:39   0:00 sh /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/bin/code-server --host=127.0.0.1 --port=0 --connection-token=4259664420-1565870122-3220486353-1664713695 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+yuki     22758  0.1  0.9 11863064 149016 pts/0 Sl+  10:39   0:06 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=4259664420-1565870122-3220486353-1664713695 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+root     22769  0.0  0.0   3068   768 ?        Ss   10:39   0:00 /init
+root     22770  0.0  0.0   3084   768 ?        S    10:39   0:00 /init
+yuki     22771  0.0  0.3 1018340 60472 pts/2   Ssl+ 10:39   0:00 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 40687 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+yuki     22778  0.1  0.4 1149968 76024 pts/0   Sl+  10:39   0:08 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/out/bootstrap-fork --type=ptyHost --logsPath /home/yuki/.vscode-server/data/logs/20250807T103401
+root     22794  0.0  0.0   3068   768 ?        Ss   10:39   0:00 /init
+root     22796  0.0  0.0   3084   768 ?        S    10:39   0:00 /init
+yuki     22799  0.0  0.3 1012968 55948 pts/3   Ssl+ 10:39   0:01 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 40687 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+yuki     22810  0.0  0.3 1261656 62052 pts/0   Sl+  10:39   0:00 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/out/bootstrap-fork --type=fileWatcher
+yuki     22829  1.7  5.5 66335652 894732 pts/0 Sl+  10:39   1:41 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node --dns-result-order=ipv4first /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+yuki     22921  0.0  0.0   6332  5120 pts/5    Ss   10:39   0:00 /bin/bash --init-file /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+yuki     22937  0.0  0.0   6772  3492 pts/0    S+   10:39   0:00 /home/yuki/.vscode-server/extensions/ms-python.python-2025.10.1-linux-x64/python-env-tools/bin/pet server
+yuki     23059  0.0  0.0   6332  5120 pts/9    Ss+  10:39   0:00 /bin/bash --init-file /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+yuki     23094  0.0  0.9 1389080 147780 pts/0  Sl+  10:39   0:01 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node /home/yuki/.vscode-server/extensions/streetsidesoftware.code-spell-checker-4.0.47/packages/_server/dist/main.cjs --node-ipc --clientProcessId=22829
+yuki     23169  0.0  0.2 128980 48640 pts/0    Sl+  10:39   0:00 /home/yuki/projects/flask_app/venv/bin/python /home/yuki/.vscode-server/extensions/ms-python.python-2025.10.1-linux-x64/python_files/run-jedi-language-server.py
+yuki     23170  0.0  0.2 127336 46848 pts/0    Sl+  10:39   0:00 /home/yuki/projects/flask_app/venv/bin/python /home/yuki/.vscode-server/extensions/ms-python.black-formatter-2025.2.0/bundled/tool/lsp_server.py --stdio
+yuki     23318  0.0  0.3 1014156 56140 pts/0   Sl+  10:39   0:00 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node /home/yuki/.vscode-server/extensions/ms-azuretools.vscode-containers-2.1.0/dist/dockerfile-language-server-nodejs/lib/server.js --node-ipc --node-ipc --clientProcessId=22829
+yuki     23324  0.0  0.3 1014740 55792 pts/0   Sl+  10:39   0:00 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node /home/yuki/.vscode-server/extensions/ms-azuretools.vscode-containers-2.1.0/dist/compose-language-service/lib/server.js --node-ipc --node-ipc --clientProcessId=22829
+yuki     25614  0.0  0.3 1014092 58716 pts/0   Sl+  10:48   0:00 /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/node /home/yuki/.vscode-server/bin/488a1f239235055e34e673291fb8d8c810886f81/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=22829
+yuki     42061  0.0  0.0   7484  3072 pts/5    R+   12:14   0:00 ps aux
