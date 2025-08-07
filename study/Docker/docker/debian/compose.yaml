@@ -1,0 +1,4 @@
+services:
+  debian:
+    image: debian:12
+    tty: true
