@@ -1,2 +1,2 @@
 # git の基本について
-# commit と log
+# commit と log の学習
