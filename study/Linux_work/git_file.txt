@@ -1,0 +1,5 @@
+# git の基本について
+# commit と log の学習
+
+ファイルを編集 → git add → commit → message
+編集 → git diff = 変更箇所を確認できる
